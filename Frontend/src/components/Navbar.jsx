@@ -63,7 +63,7 @@ const RightButton=styled(Button)`
     transition: 0.5s ease;
     color:#002884;
     &:hover{
-        background-color: #002884;
+        background-color: #002674;
         color: #ffffff;
     }
 `

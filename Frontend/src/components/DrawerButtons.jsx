@@ -36,7 +36,7 @@ const RightButton=styled(Button)`
     transition: 0.5s ease;
     color:#002884;
     &:hover{
-        background-color: #002884;
+        background-color: #002674;
         color: #ffffff;
     }
 `
@@ -62,14 +62,14 @@ const DrawerButtons = () => {
             </CenterWrapper>
 
             <RightWrapper>
-                <Link to="/login">
+                <Link to="/login" style={{textDecoration:"none",color:"inherit"}}>
                     {!user && <RightButton disableElevation variant='outlined' style={{marginRight:"20px"}}>Sign in</RightButton>}
                 </Link>
-                <Link to="register">
+                <Link to="register" style={{textDecoration:"none",color:"inherit"}}>
                     {!user && <RightButton disableElevation variant='contained' style={{backgroundColor:"#002884",color:"#ffffff",marginTop:"10px"}}>Register</RightButton>}
                 </Link>
 
-                <Link onClick={()=>dispatch(logout())}>
+                <Link style={{textDecoration:"none",color:"inherit"}} onClick={()=>dispatch(logout())}>
                     {user && <RightButton disableElevation variant='contained' style={{backgroundColor:"#002884",color:"#ffffff"}}>Logout</RightButton>}
                 </Link>
             </RightWrapper>

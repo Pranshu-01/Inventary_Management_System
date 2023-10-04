@@ -1,11 +1,12 @@
-import { Box, Button, styled } from '@mui/material'
+import { Box, Button, styled, useMediaQuery } from '@mui/material'
 import React, { useEffect, useRef, useState } from 'react'
 import QrReader from 'react-qr-reader'
 import { getItem, updateItem } from '../services/api'
 import { useNavigate } from 'react-router-dom'
 
 const Container=styled(Box)`
-	padding: 60px 20px;
+	padding: 60px 50px;
+    
    
 `
 
@@ -80,16 +81,15 @@ const ButtonWrapper=styled(Button)`
 const Error=styled(Box)`
     color:red;
     /* font-size: 14px; */
-    /* margin-bottom: 10px; */
+    margin-bottom: 10px;
     text-align: center;
 `
 
 const ScanQrCode = () => {
 
-    const [resultData,setResultData]=useState('');
+    const tablet = useMediaQuery('(min-width:769px)');
 
-
-    
+    const [resultData,setResultData]=useState('');    
 
     // const [id,setId]=useState();
 
@@ -275,7 +275,7 @@ const ScanQrCode = () => {
                         style={{width:"100%"}}
                         legacyMode={legacyMode}
                     />
-                    <ButtonWrapper disableElevation disableRipple variant="contained" onClick={handleClick}>{legacyMode? "Enable Webcam" : "Disable Webcam"}</ButtonWrapper>
+                    <ButtonWrapper disableElevation disableRipple variant="contained" onClick={handleClick}>{legacyMode? (tablet ? "Enable WebCam" : "Enable Camera") : (tablet ? "Disable WebCam" : "Disable Camera")}</ButtonWrapper>
                     {/* {webResult} */}
                 </Right>
             </Wrapper>
