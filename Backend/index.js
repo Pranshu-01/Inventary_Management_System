@@ -28,6 +28,6 @@ mongoose.connect(process.env.MONGO_URL).then(()=>{
 app.use('/api/items',itemRoute);
 app.use('/api/auth',authRoute);
 
-app.listen(port,()=>{
+app.listen(process.env.PORT || port,()=>{
     console.log(`Server running at port ${port}`)
 })
