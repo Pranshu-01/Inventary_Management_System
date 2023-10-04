@@ -111,7 +111,7 @@ const Login = () => {
         <Container>
             <Wrapper>
 			    <Heading>Sign in</Heading>
-                <Text>Welcome, please login to your account</Text>
+                <Text>Welcome, login to continue</Text>
                 <Form onSubmit={handleSubmit}>
 					<Input type='email' name='email' placeholder='Email' onChange={handleChange} required/>
 					<Input type='password' name='password' placeholder='Password' onChange={handleChange} required/>
