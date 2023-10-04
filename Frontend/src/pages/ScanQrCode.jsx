@@ -5,7 +5,7 @@ import { getItem, updateItem } from '../services/api'
 import { useNavigate } from 'react-router-dom'
 
 const Container=styled(Box)`
-	padding: 60px 60px;
+	padding: 60px 20px;
    
 `
 

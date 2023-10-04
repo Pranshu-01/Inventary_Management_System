@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { login } from '../services/api';
 
 const Container = styled(Box)`
-	padding: 60px 0px;
+	padding: 60px 20px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
