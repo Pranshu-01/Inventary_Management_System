@@ -278,7 +278,13 @@ const Table = () => {
 												<Right>
 													<AdminWrapper>
 														<Link to={`edit/${items._id}`}><IconButtonWrapper><EditIcon/></IconButtonWrapper></Link>
+														{
+														user 
+														?
 														<IconButtonWrapper><DeleteIcon onClick={()=>deleteData(items._id)}/></IconButtonWrapper>
+														:
+														<Link to="/login" style={{textDecoration:"none",color:"inherit"}}><IconButtonWrapper><DeleteIcon/></IconButtonWrapper></Link>
+														}
 													</AdminWrapper>
 												</Right>
 											</ItemsWrapper>
