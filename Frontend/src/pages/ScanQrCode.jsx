@@ -16,7 +16,7 @@ const Wrapper=styled(Box)(({theme})=>({
     [theme.breakpoints.down('md')]:{
         alignItems:"center",
         justifyContent:"center",
-        flexDirection:"column-reverse"
+        flexDirection:"column"
     }
 }))
     
@@ -29,7 +29,7 @@ const Left=styled(Box)(({theme})=>({
     padding: "30px",
     [theme.breakpoints.down('md')]:{
         width:"100%",
-        marginTop:"60px",
+        // marginTop:"60px",
         // flex:"1"
     }
 }))
@@ -48,6 +48,7 @@ const Right=styled(Box)(({theme})=>({
     [theme.breakpoints.down('md')]:{
         // flex:"1",
         width:"100%",
+        marginTop:"60px",
     }
 }))
 
