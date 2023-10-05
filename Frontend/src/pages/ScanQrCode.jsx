@@ -56,8 +56,8 @@ const Heading=styled(Box)`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 18px;
-    margin-bottom: 10px;
+    font-size: 20px;
+    /* margin-bottom: 10px; */
     color:#002884;
     font-weight: 500;
 `
@@ -82,7 +82,7 @@ const ButtonWrapper=styled(Button)`
 const Error=styled(Box)`
     color:red;
     /* font-size: 14px; */
-    margin-bottom: 10px;
+    padding: 5px;
     text-align: center;
 `
 
@@ -250,7 +250,7 @@ const ScanQrCode = () => {
             <Wrapper>
                 <Left>
                     <Heading>Upload QR Code</Heading>
-                    {error.length>0 && <Error>{error}</Error>}
+                    {error.length>0 ? <Error>{error}</Error> : <Error>&nbsp;</Error>}
                     <LeftWrapper>
                         <QrReader
                             ref={qrRef}
@@ -267,7 +267,7 @@ const ScanQrCode = () => {
                 </Left>
                 <Right>
                 <Heading>Scan QR Code</Heading>
-                {err.length>0 && <Error>{err}</Error>}
+                {err.length>0 ? <Error>{err}</Error> : <Error>&nbsp;</Error>}
 
                     <QrReader
                         delay={300}
