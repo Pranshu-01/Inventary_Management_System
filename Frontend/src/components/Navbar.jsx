@@ -101,7 +101,7 @@ const Navbar = () => {
     <>
         <Container>
             <Link to="/" style={{textDecoration:"none",color:"inherit"}}>
-                <Left variant='span'>Inventary Management System</Left>
+                <Left variant='span'>Inventory Management System</Left>
             </Link>
 
             <CenterWrapper>
