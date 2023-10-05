@@ -82,6 +82,9 @@ const Option=styled('option')({
 
 const Edit = () => {
 
+	const today = new Date().toISOString().split('T')[0];
+
+
     const {id}=useParams();
 
 
@@ -144,7 +147,7 @@ const Edit = () => {
                             <Option value="C5">C5</Option>
                         </Select>
 						<Text>Date</Text>
-						<Input type="date" name='date' onChange={handleDate} value={data.date.received_date} required/>
+						<Input type="date" name='date' inputProps={{max:today}} onChange={handleDate} value={data.date.received_date} required/>
 						<Text>Quantity</Text>
 						<Input type="number" name='quantity' inputProps={{min:data.quantity.dispatched_quantity ? data.quantity.dispatched_quantity : "1" }} value={data.quantity.received_quantity} onChange={handleQuantity} required/>
 						<Button>Generate QR</Button>
