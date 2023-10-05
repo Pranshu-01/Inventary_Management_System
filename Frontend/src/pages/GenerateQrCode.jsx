@@ -76,7 +76,7 @@ const Select=styled('select')({
 	borderRadius: "2px",
 	margin: "10px 0px",
 	background:"#ffffff",
-	// appearance:"none"
+	appearance:"none"
 })
 
 const Option=styled('option')({
