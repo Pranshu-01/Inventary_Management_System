@@ -83,6 +83,8 @@ const Option=styled('option')({
 
 const GenerateQrCode = () => {
 
+	const today = new Date().toISOString().split('T')[0];
+
 	const navigate=useNavigate();
 
     const [data,setData]=useState({
@@ -129,7 +131,7 @@ const GenerateQrCode = () => {
                             <Option value="C5">C5</Option>
                         </Select>
 						<Text>Date</Text>
-						<Input type="date" name='date' onChange={handleDate} required/>
+						<Input type="date" name='date' inputProps={{max:today}} onChange={handleDate} required/>
 						<Text>Quantity</Text>
 						<Input type="number" name='quantity' inputProps={{min:"1"}} onChange={handleQuantity} required/>
 						<Button>Generate QR</Button>
