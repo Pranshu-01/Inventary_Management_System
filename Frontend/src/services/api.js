@@ -2,7 +2,9 @@ import axios from 'axios'
 import { loginFailure, loginStart, loginSuccess } from '../redux/features/userRedux';
 
 // const URL="http://localhost:5000/api"
-const URL="https://cute-ruby-vulture-cape.cyclic.cloud/api"
+// const URL="https://cute-ruby-vulture-cape.cyclic.cloud/api"
+const URL="https://inventary-management-system.vercel.app/api"
+
 
 export const addItems=(data)=>{
     try{
