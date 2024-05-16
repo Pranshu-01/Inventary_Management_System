@@ -114,6 +114,7 @@ const Table = () => {
 		getAllItems();
 	}, []);
 
+
 	const getAllItems = async () => {
 		const response = await getItems();
 		setData(response.data);
@@ -135,11 +136,18 @@ const Table = () => {
 		getAllItems();
 	  }
 
+	//   useEffect(()=>{
+	// 	const printWindow = window.open('print.html', 'HELLO', 'width=800,height=600');
+    // 	if (printWindow) {
+    //  	 printWindow.print();
+    //   	printWindow.close();
+	// 	} else {
+	// 	alert('Popup blocked. Please allow pop-ups for this site and try again.');
+	// 	}
+	//   },[])
 	  
 	return (
 		<>
-			
-
 			<Container>
 				<Wrapper>
 					{Mobile ? <TableWrapper cellSpacing={"30"}>
@@ -267,7 +275,7 @@ const Table = () => {
 													level='M'
 													size={70}
 													bgColor="#ffffff"
-													onClick={()=>handleDownloadQRCode(items)}
+													onClick={()=>{handleDownloadQRCode(items),handlePrint(items)}}
 												/>
                                         		)}
 												</Right>
